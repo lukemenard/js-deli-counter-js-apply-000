@@ -47,11 +47,25 @@ function nowServing(katzDeli){
 
 
 function currentLine(katzDeli){
+  // 1. Defines the function 'currentLine' that will return the current line of names with their position in the line
+      //'currentLine' accepts one parameter, 'katzDeli', the contents of which are pulled from 'nowServing' above
+  
   var line = [];
+  // 2. Defines the local variable 'line' WITHIN the 'currentLine' function
+      //Assigns 'line' an empty array
+  
   for(let i = 0; i < katzDeli.length;) {
     line.push(`${i + 1}. ${katzDeli[i]}`);
     i++;
   }
+  // 3. Executes a for loop
+      // Initializtion: defines 'i' as the control variable and assigns it the integer 0
+      // Condition: confirms that 'i' is less than the count of names in 'katzDeli'. If boolean true, the loop is executed.
+      // Loop Body: as the loop iterates, adds a string to the end of the array 'line'
+            // The interpolation ${i + 1} takes the index of the name in question and adds one to give the true position of the name in the array.
+            // The interpolation ${katzDeli[i]} returns the name in the 'katzDeli' array at the index in question
+      // Iteration: i++ increments the control variable 'i' after the loop is executed
+  
   if (katzDeli.length === 0){
     return "The line is currently empty.";
   }
@@ -59,17 +73,6 @@ function currentLine(katzDeli){
     return `The line is currently: ${line.join(', ')}`;
   }
 }
-// 1. Defines the function 'currentLine' that will return the current line of names with their position in the line
-      //'currentLine' accepts one parameter, 'katzDeli', the contents of which are pulled from 'nowServing' above
-// 2. Defines the local variable 'line' WITHIN the 'currentLine' function
-      //Assigns 'line' an empty array
-// 3. Executes a for loop
-      // Initializtion: defines 'i' as the control variable and assigns it the integer 0
-      // Condition: confirms that 'i' is less than the count of names in 'katzDeli'. If boolean true, the loop is executed.
-      // Loop Body: as the loop iterates, adds a string to the end of the array 'line'
-            // The interpolation ${i + 1} takes the index of the name in question and adds one to give the true position of the name in the array.
-            // The interpolation ${katzDeli[i]} returns the name in the 'katzDeli' array at the index in question
-      // Iteration: i++ increments the control variable 'i' after the loop is executed
 // 4. Executes control flow conditionals
       // If statement: if there is nobody in the deli line (i.e. no 'name' has been added to the 'katzDeli' via the 'takeANumber' function), 'currentLine' returns the string 'The line is currently empty.'
       // Else statement: as long as there are more than zero people in the deli line, 'nowServing' returns the string "The line is currently: ${line.join(', ')}"
