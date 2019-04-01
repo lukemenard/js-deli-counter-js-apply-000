@@ -18,10 +18,20 @@ function takeANumber(katzDeli,name){
           // Calling the position of the name in the array (the index) would have returned their position as one less
 
 function nowServing(katzDeli){
+  // 1. Defines the function 'nowServing' that will give the next person in line and then remove that person from the queue
+      //'nowServing' accepts one parameter, 'katzDeli', the contents of which are pulled from 'takeANumber' above
+  
   let i = 0;
+  // 2. Defines the local variable 'i' WITHIN 'nowServing'
+      // Assigns 'i' the integer 0
+  
   while (i < katzDeli.length){
     i++;
   }
+  // 3. Executes a while loop
+      // Condition: confirms that 'i' is less than the count of names added to 'katzDeli'. If boolean true, the loop is executed.
+      // Loop Body: i++ increments the control variable 'i'
+  
   if (katzDeli.length === 0){
     return "There is nobody waiting to be served!";
   }
@@ -29,13 +39,6 @@ function nowServing(katzDeli){
     return (`Currently serving ${katzDeli.shift()}.`);
   }
 }
-// 1. Defines the function 'nowServing' that will give the next person in line and then remove that person from the queue
-      //'nowServing' accepts one parameter, 'katzDeli', the contents of which are pulled from 'takeANumber' above
-// 2. Defines the local variable 'i' WITHIN 'nowServing'
-      // Assigns 'i' the integer 0
-// 3. Executes a while loop
-      // Condition: confirms that 'i' is less than the count of names added to 'katzDeli'. If boolean true, the loop is executed.
-      // Loop Body: i++ increments the control variable 'i'
 // 4. Executes control flow conditionals
       // If statement: if there is nobody in the deli line (i.e. no 'name' has been added to the 'katzDeli' via the 'takeANumber' function), 'nowServing' returns the string 'There is nobody waiting to be served'
       // Else statement: as long as there are more than zero people in the deli line, 'nowServing' returns the string "Currently serving ${katzDeli.shift()}".
