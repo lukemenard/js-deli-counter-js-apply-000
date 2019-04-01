@@ -14,7 +14,8 @@ function takeANumber(katzDeli,name){
 // 3. Returns the string 'Welcome, ${name}. Your are number ${katzDeli.length} in line.'
       // Because the phrase is wrapped in back ticks, the interpolation '${name}' will return the entered name as a string
       // The interpolation ${katzDeli.length} will return the length of the array as a string
-          // This technique returns the actual number of people added to the line, while calling the position of the name in the array (the index) would have returned their position as one less
+          // This technique returns the actual number of people added to the line
+          // Calling the position of the name in the array (the index) would have returned their position as one less
 
 function nowServing(katzDeli){
   let i = 0;
