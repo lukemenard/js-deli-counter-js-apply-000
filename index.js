@@ -3,12 +3,14 @@ var katzDeli = [];
       // Assigns 'katzDeli' an empty array
 
 function takeANumber(katzDeli,name){
+  // 1. Defines the function 'takeANumber' that will be used when a new person enters the deli
+      //'takeANumber' accepts two parameters, 'katzDeli' and 'name'
+  
   katzDeli.push(`${name}`);
+  // 2. Adds the entered name to the end of the 'katzDeli' array
+
   return `Welcome, ${name}. You are number ${katzDeli.length} in line.`;
 }
-// 1. Defines the function 'takeANumber' that will be used when a new person enters the deli
-      //'takeANumber' accepts two parameters, 'katzDeli' and 'name'
-// 2. Adds the entered name to the end of the 'katzDeli' array
 // 3. Returns the string 'Welcome, ${name}. Your are number ${katzDeli.length} in line.'
       // Because the phrase is wrapped in back ticks, the interpolation '${name}' will return the entered name as a string
       // The interpolation ${katzDeli.length} will return the length of the array as a string
